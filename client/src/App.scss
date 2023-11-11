@@ -4,28 +4,28 @@
   font-family: var(--font-base);
 }
 
-.app_primarybg {
+.app__primarybg {
   background-color: var(--primary-color);
 }
 
-.app_secondarybg {
+.app__secondarybg {
   background-color: var(--secondary-color);
 }
 
-.app_container {
+.app__container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
 }
 
-.app_flex {
+.app__flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.app_wrapper {
+.app__wrapper {
   flex: 1;
   width: 100%;
   flex-direction: column;
@@ -36,7 +36,7 @@
   }
 }
 
-.app_social {
+.app__social {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -83,14 +83,14 @@
   }
 }
 
-.app_navigation {
+.app__navigation {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
 
-  .app__navigation-dot {
+  .app___navigation-dot {
     width: 0.625rem;
     height: 0.625rem;
     border-radius: 50%;
@@ -170,8 +170,8 @@
 }
 
 @media screen and (max-width: 480px) {
-  .app_navigation,
-  .app_social {
+  .app__navigation,
+  .app__social {
     display: none;
   }
 
