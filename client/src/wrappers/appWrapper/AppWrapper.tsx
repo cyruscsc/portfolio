@@ -6,11 +6,7 @@ interface AppWrapperProps {
 }
 
 const AppWrapper = ({ children }: AppWrapperProps) => {
-  return (
-    <div className='app-wrapper'>
-      <div className='children-container'>{children}</div>
-    </div>
-  );
+  return <div className='app__wrapper'>{children}</div>;
 };
 
 export default AppWrapper;

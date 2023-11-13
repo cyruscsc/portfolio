@@ -25,7 +25,6 @@
 }
 
 .app__navbar-links {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,7 +110,7 @@
       width: 2rem;
       height: 2rem;
       color: var(--secondary-color);
-      margin: 1.75rem 1rem;
+      margin: 0.5rem 1rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 

@@ -1,13 +1,13 @@
 import { Navbar } from './components';
 import { About, Footer, Header, Projects, Skills } from './containers';
 import './App.scss';
-import { AppWrapper } from './wrapper';
+import { AppWrapper } from './wrappers';
 
 function App() {
   return (
     <div className='app'>
+      <Navbar />
       <AppWrapper>
-        <Navbar />
         <Header />
         <About />
         <Projects />

@@ -1,0 +1,9 @@
+.app__about {
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  strong {
+    color: var(--accent-color);
+  }
+}

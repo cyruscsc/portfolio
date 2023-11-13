@@ -9,11 +9,6 @@ export default {
       type: 'string',
     },
     {
-      name: 'bgColor',
-      title: 'Bg Color',
-      type: 'string',
-    },
-    {
       name: 'icon',
       title: 'Icon',
       type: 'image',
