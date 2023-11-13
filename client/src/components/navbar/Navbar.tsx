@@ -5,7 +5,7 @@ import './Navbar.scss';
 import { useState } from 'react';
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const variants = {
     open: {
