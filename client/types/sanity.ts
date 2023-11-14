@@ -14,7 +14,21 @@ export interface About {
   image?: SanityImageObject;
 }
 
-export interface Socials {
+export interface Project {
+  title: string;
+  description: PortableTextBlock[];
+  projectLink: string;
+  codeLink: string;
+  image: SanityImageObject;
+  tags: Skill[];
+}
+
+export interface Skill {
+  name: string;
+  icon: SanityImageObject;
+}
+
+export interface Social {
   platform: string;
   link: string;
 }
