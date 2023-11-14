@@ -31,6 +31,18 @@ export interface Skill {
   order: number;
 }
 
+export interface Experience {
+  year: number;
+  works: Work[];
+}
+
+export interface Work {
+  name: string;
+  company: string;
+  description?: string;
+  order: number;
+}
+
 export interface Social {
   platform: string;
   link: string;

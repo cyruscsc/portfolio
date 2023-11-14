@@ -23,14 +23,14 @@ const Card = (project: Project) => {
           className='project-image'
         />
         <div className='text-container'>
-          <h3>{project.title}</h3>
+          <h3 className='section-heading'>{project.title}</h3>
           <PortableText value={project.description} />
         </div>
         <div className='badges-container'>
           {project.tags
             .sort((a, b) => a.order - b.order)
             .map((skill) => (
-              <Badge key={skill.name} {...skill} />
+              <Badge key={skill.name} skill={skill} type='sm' />
             ))}
         </div>
       </div>
