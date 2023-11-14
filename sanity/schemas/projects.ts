@@ -4,11 +4,18 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
     },
-
     {
       name: 'description',
       title: 'Description',
@@ -26,19 +33,15 @@ export default {
       type: 'string',
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-
-    {
       name: 'tags',
       title: 'Tags',
       type: 'array',
       of: [{type: 'skills'}],
+    },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
     },
   ],
 }

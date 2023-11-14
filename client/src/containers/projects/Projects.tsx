@@ -10,7 +10,11 @@ const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([] as Project[]);
 
   useEffect(() => {
-    client.fetch(projectsQuery).then((data) => setProjects(data));
+    client
+      .fetch(projectsQuery)
+      .then((data: Project[]) =>
+        setProjects(data.sort((a, b) => a.order - b.order))
+      );
   }, []);
 
   return (

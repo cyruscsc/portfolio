@@ -15,17 +15,20 @@ export interface About {
 }
 
 export interface Project {
+  image: SanityImageObject;
   title: string;
   description: PortableTextBlock[];
   projectLink: string;
   codeLink: string;
-  image: SanityImageObject;
   tags: Skill[];
+  order: number;
 }
 
 export interface Skill {
   name: string;
   icon: SanityImageObject;
+  category: string;
+  order: number;
 }
 
 export interface Social {

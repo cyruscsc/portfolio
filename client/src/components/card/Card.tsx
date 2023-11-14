@@ -27,9 +27,11 @@ const Card = (project: Project) => {
           <PortableText value={project.description} />
         </div>
         <div className='badges-container'>
-          {project.tags.map((skill) => (
-            <Badge key={skill.name} {...skill} />
-          ))}
+          {project.tags
+            .sort((a, b) => a.order - b.order)
+            .map((skill) => (
+              <Badge key={skill.name} {...skill} />
+            ))}
         </div>
       </div>
       <div className='links-container'>

@@ -18,5 +18,10 @@ export default {
       title: 'Description',
       type: 'text',
     },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+    },
   ],
 }
