@@ -43,6 +43,12 @@ export interface Work {
   order: number;
 }
 
+export interface ContactForm {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export interface Social {
   platform: string;
   link: string;
