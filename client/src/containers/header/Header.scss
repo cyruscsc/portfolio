@@ -2,4 +2,36 @@
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+
+  .app__header-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .image-container {
+      display: none;
+
+      img {
+        width: 100%;
+      }
+
+      @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
 }
