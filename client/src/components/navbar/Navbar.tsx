@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
       <ul className='app__navbar-links'>
         {navlinks.map((link) => (
-          <li key={link.title} className='app__flex p-text'>
+          <li key={link.title} className='app__flex'>
             <div />
             <a href={link.path}>{link.title}</a>
           </li>

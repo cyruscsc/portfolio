@@ -17,17 +17,11 @@
 
   img {
     width: 5rem;
-
-    @media screen and (min-width: 2000px) {
-      width: 10rem;
-    }
   }
 }
 
 .app__navbar-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
 
   li {
     margin: 0 1rem;
@@ -48,6 +42,7 @@
       text-decoration: none;
       flex-direction: column;
       text-transform: uppercase;
+      font-size: 0.75rem;
       font-weight: 500;
       transition: all 0.3s ease-in-out;
 
@@ -63,8 +58,10 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

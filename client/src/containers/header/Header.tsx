@@ -20,7 +20,7 @@ const Header = () => {
             whileInView={{ x: [-100, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
           >
-            <p className='p-text'>Hi, my name is</p>
+            <p className='greeting'>Hi, my name is</p>
             <h1 className='title-text'>{brand.name}</h1>
           </motion.div>
           <motion.div
@@ -33,7 +33,7 @@ const Header = () => {
             whileInView={{ x: [-100, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5, delay: 1 }}
           >
-            <p className='p-text'>{brand.description}</p>
+            <p className='introduction'>{brand.description}</p>
           </motion.div>
         </div>
         <div className='image-container'>

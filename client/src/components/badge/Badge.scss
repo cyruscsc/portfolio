@@ -1,4 +1,6 @@
 .app__badge-sm {
+  width: max-content;
+  height: max-content;
   display: flex;
   flex: 0 0 auto;
   align-items: center;
@@ -18,6 +20,8 @@
 }
 
 .app__badge-lg {
+  width: max-content;
+  height: max-content;
   display: flex;
   flex: 0 0 auto;
   align-items: center;

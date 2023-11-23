@@ -46,10 +46,16 @@ const Contact = () => {
 
   return (
     <section id='contact' className='app__container app__contact'>
-      <h2 className='subtitle-text'>Get in Touch with Me</h2>
-      <motion.form
+      <motion.h2
+        className='subtitle-text'
         whileInView={{ y: [100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
+      >
+        Get in Touch with Me
+      </motion.h2>
+      <motion.form
+        whileInView={{ y: [100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         onSubmit={handleSubmit}
       >
         <div>

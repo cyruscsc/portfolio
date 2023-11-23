@@ -21,6 +21,11 @@
       color: var(--text-color);
       transition: all 0.3s ease-in-out;
 
+      &::placeholder {
+        color: var(--secondary-color);
+        opacity: 1;
+      }
+
       &:focus {
         border: 1px solid var(--accent-color);
       }
@@ -37,6 +42,11 @@
       color: var(--text-color);
       font-family: var(--font-base);
       transition: all 0.3s ease-in-out;
+
+      &::placeholder {
+        color: var(--secondary-color);
+        opacity: 1;
+      }
 
       &:focus {
         border: 1px solid var(--accent-color);

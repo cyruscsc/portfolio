@@ -30,16 +30,25 @@ const About = () => {
             <PortableText value={about.description} />
           </motion.div>
         </div>
-        <div className='image-container'>
+        <motion.div
+          className='image-container'
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
           {about.image && (
             <motion.img
               src={urlFor(about.image).url()}
               alt={about.title}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5, delay: 1 }}
+              animate={{ opacity: [1, 0.8, 1] }}
+              transition={{
+                duration: 0.75,
+                repeat: Infinity,
+                repeatType: 'loop',
+                repeatDelay: 4.25,
+              }}
             />
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

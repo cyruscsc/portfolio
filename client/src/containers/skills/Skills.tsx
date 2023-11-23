@@ -50,16 +50,18 @@ const Skills = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className='skills-experience-container'
       >
-        <div className='skills-container'>
-          {languages.map((language) => (
-            <Badge skill={language} type='lg' />
-          ))}
-          {backends.map((backend) => (
-            <Badge skill={backend} type='lg' />
-          ))}
-          {frontends.map((frontend) => (
-            <Badge skill={frontend} type='lg' />
-          ))}
+        <div>
+          <div className='skills-container'>
+            {languages.map((language) => (
+              <Badge skill={language} type='lg' />
+            ))}
+            {backends.map((backend) => (
+              <Badge skill={backend} type='lg' />
+            ))}
+            {frontends.map((frontend) => (
+              <Badge skill={frontend} type='lg' />
+            ))}
+          </div>
         </div>
         <div className='experience-container'>
           {exp.map((exp) => (

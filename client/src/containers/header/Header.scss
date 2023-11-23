@@ -13,6 +13,14 @@
       flex-direction: column;
       justify-content: center;
       gap: 1rem;
+
+      .greeting {
+        color: var(--text-color);
+      }
+
+      .introduction {
+        color: var(--accent-color);
+      }
     }
 
     .image-container {
