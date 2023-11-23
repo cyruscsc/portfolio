@@ -18,6 +18,7 @@ export interface Project {
   image: SanityImageObject;
   title: string;
   description: PortableTextBlock[];
+  launched: boolean;
   projectLink: string;
   codeLink: string;
   tags: Skill[];

@@ -23,6 +23,11 @@ export default {
       of: [{type: 'block'}],
     },
     {
+      name: 'launched',
+      title: 'Launched',
+      type: 'boolean',
+    },
+    {
       name: 'projectLink',
       title: 'Project Link',
       type: 'string',

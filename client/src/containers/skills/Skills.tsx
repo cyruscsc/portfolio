@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
-import './Skills.scss';
-import { Experience, Skill } from '../../../types/sanity';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { Badge } from '../../components';
+import { Experience, Skill } from '../../../types/sanity';
 import { client } from '../../../utils/sanity';
 import { experienceQuery, skillsQuery } from '../../../utils/queries';
-import Badge from '../../components/badge/Badge';
+import './Skills.scss';
 
 const Skills = () => {
   const [languages, setLanguages] = useState<Skill[]>([] as Skill[]);

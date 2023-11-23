@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
-import './Projects.scss';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { Card } from '../../components';
 import { Project } from '../../../types/sanity';
 import { client } from '../../../utils/sanity';
 import { projectsQuery } from '../../../utils/queries';
-import Card from '../../components/card/Card';
+import './Projects.scss';
 
 const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([] as Project[]);

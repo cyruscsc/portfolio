@@ -1,8 +1,8 @@
 import { FormEvent, useState } from 'react';
+import { GoCircle, GoCheckCircle } from 'react-icons/go';
+import { motion } from 'framer-motion';
 import { ContactForm } from '../../../types/sanity';
 import { client } from '../../../utils/sanity';
-import { motion } from 'framer-motion';
-import { GoCircle, GoCheckCircle } from 'react-icons/go';
 import './Contact.scss';
 
 const Contact = () => {

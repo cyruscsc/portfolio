@@ -1,10 +1,9 @@
-import { motion } from 'framer-motion';
 import { PortableText } from '@portabletext/react';
+import { motion } from 'framer-motion';
+import { Badge, ButtonLink } from '../../components';
 import { Project } from '../../../types/sanity';
-import './Card.scss';
-import Badge from '../badge/Badge';
-import ButtonLink from '../button-link/ButtonLink';
 import { urlFor } from '../../../utils/sanity';
+import './Card.scss';
 
 const Card = (project: Project) => {
   return (
@@ -35,8 +34,12 @@ const Card = (project: Project) => {
         </div>
       </div>
       <div className='links-container'>
-        <ButtonLink label='Demo' to={project.projectLink} />
-        <ButtonLink label='Code' to={project.codeLink} />
+        <ButtonLink
+          label={project.launched ? 'View' : 'Demo'}
+          to={project.projectLink}
+          target='_blank'
+        />
+        <ButtonLink label='Code' to={project.codeLink} target='_blank' />
       </div>
     </motion.article>
   );

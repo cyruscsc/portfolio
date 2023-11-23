@@ -1,7 +1,7 @@
-import { Navbar } from './components';
 import { About, Contact, Header, Projects, Skills } from './containers';
-import './App.scss';
 import { AppWrapper } from './wrappers';
+import { Navbar, Footer } from './components';
+import './App.scss';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Skills />
         <Contact />
       </AppWrapper>
+      <Footer />
     </div>
   );
 }

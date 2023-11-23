@@ -1,11 +1,24 @@
+import { useEffect, useState } from 'react';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import { RiLinkedinFill, RiGithubLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
+import { Social } from '../../../types/sanity';
 import { images, navlinks } from '../../constants';
+import { client } from '../../../utils/sanity';
+import { socialsQuery } from '../../../utils/queries';
 import './Navbar.scss';
-import { useState } from 'react';
 
 const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [linkedin, setLinkedin] = useState<Social>();
+  const [github, setGithub] = useState<Social>();
+
+  useEffect(() => {
+    client.fetch(socialsQuery).then((data) => {
+      setLinkedin(data.filter((x: Social) => x.platform === 'linkedin')[0]);
+      setGithub(data.filter((x: Social) => x.platform === 'github')[0]);
+    });
+  }, []);
 
   const variants = {
     open: {
@@ -24,6 +37,18 @@ const Navbar = () => {
         <img src={images.logo} alt='Cyrus Chan' />
       </div>
       <ul className='app__navbar-links'>
+        <li className='app__flex'>
+          <div />
+          <a href={linkedin?.link} target='_blank'>
+            <RiLinkedinFill />
+          </a>
+        </li>
+        <li className='app__flex'>
+          <div />
+          <a href={github?.link} target='_blank'>
+            <RiGithubLine />
+          </a>
+        </li>
         {navlinks.map((link) => (
           <li key={link.title} className='app__flex'>
             <div />
@@ -35,7 +60,7 @@ const Navbar = () => {
         <HiMenuAlt3 onClick={() => setOpen(true)} />
         <motion.div animate={open ? 'open' : 'closed'} variants={variants}>
           <HiX onClick={() => setOpen(false)} />
-          <ul>
+          <ul className='y-list'>
             {navlinks.map((link) => (
               <li key={'menu-' + link.title}>
                 <a href={link.path} onClick={() => setOpen(false)}>
@@ -43,6 +68,18 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+          </ul>
+          <ul className='x-list'>
+            <li>
+              <a href={linkedin?.link} target='_blank'>
+                <RiLinkedinFill />
+              </a>
+            </li>
+            <li>
+              <a href={github?.link} target='_blank'>
+                <RiGithubLine />
+              </a>
+            </li>
           </ul>
         </motion.div>
       </div>

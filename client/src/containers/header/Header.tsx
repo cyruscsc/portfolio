@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import './Header.scss';
 import { useEffect, useState } from 'react';
-import { client, urlFor } from '../../../utils/sanity';
-import { brandQuery } from '../../../utils/queries';
+import { motion } from 'framer-motion';
 import { Brand } from '../../../types/sanity';
+import { brandQuery } from '../../../utils/queries';
+import { client, urlFor } from '../../../utils/sanity';
+import './Header.scss';
 
 const Header = () => {
   const [brand, setBrand] = useState<Brand>({} as Brand);

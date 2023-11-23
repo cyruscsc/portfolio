@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { client, urlFor } from '../../../utils/sanity';
-import { aboutQuery } from '../../../utils/queries';
-import { About } from '../../../types/sanity';
 import { PortableText } from '@portabletext/react';
 import { motion } from 'framer-motion';
+import { About } from '../../../types/sanity';
+import { aboutQuery } from '../../../utils/queries';
+import { client, urlFor } from '../../../utils/sanity';
 import './About.scss';
 
 const About = () => {
